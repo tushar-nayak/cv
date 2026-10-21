@@ -1,4 +1,4 @@
-name: Build and Push Resume PDF and Preview
+name: Build and Push CV PDF and Preview
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
           mv main.pdf tushar-nayak-cv.pdf
           
           # 2. Convert the first page of the PDF to a PNG image
-          pdftoppm -png -r 150 -singlefile tushar-nayak-resume.pdf preview
+          pdftoppm -png -r 150 -singlefile tushar-nayak-cv.pdf preview
 
           # 3. Keep the GitHub Pages docs folder in sync with the generated assets
           cp tushar-nayak-cv.pdf docs/tushar-nayak-cv.pdf
