@@ -1,0 +1,495 @@
+\documentclass[letterpaper,10pt]{article}
+
+%----------PACKAGES----------
+\usepackage[
+    left=0.50in,
+    right=0.50in,
+    top=0.48in,
+    bottom=0.48in
+]{geometry}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+
+%----------COLORS----------
+\definecolor{darkblue}{RGB}{0,0,120}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue
+}
+
+%----------FORMATTING----------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\baselinestretch}{1.00}
+
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+
+%----------CUSTOM COMMANDS----------
+
+\newcommand{\cvItem}[1]{
+    \item \small{#1}
+}
+
+\newcommand{\cvSubheading}[4]{
+    \vspace{1pt}
+    \begin{tabularx}{\textwidth}{X r}
+        \textbf{#1} & #2 \\
+        \textit{\small #3} & \small #4 \\
+    \end{tabularx}
+    \vspace{-3pt}
+}
+
+\newcommand{\cvProjectHeading}[2]{
+    \vspace{1pt}
+    \begin{tabularx}{\textwidth}{X r}
+        \textbf{#1} & \small #2 \\
+    \end{tabularx}
+    \vspace{-3pt}
+}
+
+\newcommand{\cvItemListStart}{
+    \begin{itemize}[
+        leftmargin=0.16in,
+        itemsep=0.75pt,
+        parsep=0pt,
+        topsep=1.5pt,
+        partopsep=0pt
+    ]
+}
+
+\newcommand{\cvItemListEnd}{
+    \end{itemize}
+    \vspace{0pt}
+}
+
+\begin{document}
+
+%===========================================================
+% HEADER
+%===========================================================
+
+\begin{center}
+    {\Huge \textbf{Tushar Nayak}} \\[-1pt]
+
+    \small
+    \href{mailto:tusharnayak@outlook.com}{tusharnayak@outlook.com}
+    $|$
+    \href{tel:+14124785677}{(412) 478-5677}
+    $|$
+    \href{https://linkedin.com/in/nayaktushar}{linkedin.com/in/nayaktushar}
+    $|$
+    \href{https://tushar-nayak.github.io}{tushar-nayak.github.io}
+    $|$
+    \href{https://github.com/tushar-nayak}{github.com/tushar-nayak}
+\end{center}
+
+\vspace{-6pt}
+
+
+%===========================================================
+% RESEARCH FOCUS
+%===========================================================
+
+\section{Research Focus}
+
+\small{
+Biomedical engineering researcher developing geometry-aware learning methods
+for medical image analysis, with an emphasis on recovering 3D anatomy, motion,
+and deformation from sparse, noisy, or multimodal clinical observations.
+Research interests include sparse-view 2D--3D reconstruction, deformable
+anatomical modeling and registration, neural implicit and Gaussian
+representations, graph-based geometric learning, and physics- and
+geometry-informed methods for image-guided intervention.
+}
+
+
+%===========================================================
+% EDUCATION
+%===========================================================
+
+\section{Education}
+
+\cvSubheading
+    {Carnegie Mellon University}
+    {Pittsburgh, PA}
+    {M.S. Biomedical Engineering, Computational Research Track}
+    {May 2026}
+
+\small{
+\textit{Courses:
+Computer Vision, Learning for 3D Vision, Medical Image Analysis,
+Image-Based Computational Modeling and Analysis, Clinical Translations of AI.
+}}
+
+\vspace{2pt}
+
+\cvSubheading
+    {Manipal Institute of Technology}
+    {Manipal, India}
+    {B.Tech. Biomedical Engineering, Minor in Data Science}
+    {May 2023}
+
+
+%===========================================================
+% RESEARCH EXPERIENCE
+%===========================================================
+
+\section{Research Experience}
+
+
+%---------------- UCHICAGO ----------------
+
+\cvProjectHeading
+    {Staff Scientist, Surgical Biomechanics Lab, University of Chicago}
+    {Aug 2026 -- Present}
+
+\textit{\small
+Geometry-Aware Learning and Computational Modeling for Vascular Biomechanics
+}
+
+\cvItemListStart
+
+    \cvItem{
+    Serving as staff scientist and computer vision/ML researcher under
+    Dr. Luka Pocivavsek, developing computational imaging and machine learning
+    methods for patient-specific vascular anatomy, biomechanics, and
+    image-guided intervention.
+    }
+
+    \cvItem{
+    Building CT/CTA-to-3D vascular modeling pipelines spanning medical-image
+    preprocessing, segmentation, surface reconstruction, mesh processing,
+    anatomical correspondence, and geometry quality assurance.
+    }
+
+    \cvItem{
+    Investigating longitudinal vascular remodeling through regional geometric
+    descriptors, including baseline integrated Gaussian curvature and
+    subsequent patch-wise surface-area growth, with extension toward
+    biomechanical stress analysis.
+    }
+
+\cvItemListEnd
+
+
+%---------------- PITT / TRACER ----------------
+
+\cvProjectHeading
+    {Research Collaborator, Surreality Lab, University of Pittsburgh}
+    {Sept 2026 -- Present}
+
+\textit{\small
+Multimodal AI for Intraoperative Sensing and Image-Guided Intervention
+}
+
+\cvItemListStart
+
+    \cvItem{
+    Contributing to \textsc{TRACER}, an automated intraoperative speech-analysis
+    pipeline for awake craniotomy that isolates patient speech from noisy
+    operating-room audio using speaker attribution, word-onset localization,
+    overlap detection, and neural speech separation.
+    }
+
+    \cvItem{
+    Developing and evaluating deep learning methods for robust speech-overlap
+    detection and selective source separation, with emphasis on identifying
+    failure modes and preventing enhancement models from degrading clinically
+    relevant speech measurements.
+    }
+
+    \cvItem{
+    Auditing robustness and deployment assumptions across diarization,
+    temporal localization, overlap detection, and speech-separation components
+    to improve reliability for quantitative intraoperative language assessment.
+    }
+
+\cvItemListEnd
+
+
+%---------------- FLUOROGRID ----------------
+
+\cvProjectHeading
+    {Graduate Researcher, Computational Engineering \& Robotics Lab, Carnegie Mellon University}
+    {Aug 2024 -- Jul 2026}
+
+\textit{\small
+Real-Time 3D Vascular Deformation Estimation from Sparse 2D Angiography
+}
+
+\cvItemListStart
+
+    \cvItem{
+    Developed \textsc{FluoroGRID}, a real-time multimodal framework for
+    estimating patient-specific 3D vascular deformation from monocular
+    fluoroscopy by combining image evidence, preoperative anatomy, camera
+    geometry, and sparse vascular control points.
+    }
+
+    \cvItem{
+    Architected a quad-encoder geometric deep learning system integrating
+    ResNet image features, ordered-chain graph representations, sampled
+    vascular mesh geometry, and fluoroscopic acquisition metadata for
+    physically plausible 3D deformation estimation.
+    }
+
+    \cvItem{
+    Designed geometry-aware objectives incorporating differentiable projection,
+    structural smoothness, curvature constraints, and discrete differential
+    geometry; achieved sub-millimeter reconstruction precision with
+    real-time inference.
+    }
+
+    \cvItem{
+    Built a physics-grounded synthetic data pipeline for vascular deformation
+    and fluoroscopy-style projection, generating more than 370,000 paired
+    3D--2D training examples across diverse viewing geometries and
+    deformation conditions.
+    }
+
+\cvItemListEnd
+
+
+%---------------- GBM ----------------
+
+\cvProjectHeading
+    {Research Assistant, The $\forall$ Lab \& Image Science Lab, Carnegie Mellon University}
+    {Feb 2025 -- Aug 2025}
+
+\textit{\small
+Longitudinal Glioblastoma Evolution and Visual Forecasting
+}
+
+\cvItemListStart
+
+    \cvItem{
+    Developed a continuous-time longitudinal forecasting framework combining
+    Attention U-Net representations, temporal embeddings, and Neural ODE
+    dynamics to predict future glioblastoma state from multimodal MRI.
+    }
+
+    \cvItem{
+    Reduced mean-squared prediction error by 6.7\% relative to a persistence
+    baseline and reduced relative FLAIR-volume error by 98\%; presented the
+    work at the 2025 CMU Biomedical Engineering Forum.
+    }
+
+\cvItemListEnd
+
+
+%===========================================================
+% SELECTED RESEARCH PROJECTS
+%===========================================================
+
+\section{Selected Research Projects}
+
+
+%---------------- CARDIAC ----------------
+
+\cvProjectHeading
+    {\href{https://github.com/tushar-nayak/cardiac-reconstruction-evolved}
+    {Sparse Echocardiography to 3D Cardiac Volume Reconstruction}}
+    {Aug 2025 -- Present}
+
+\cvItemListStart
+
+    \cvItem{
+    Developed a coordinate-based neural implicit reconstruction framework that
+    recovers dense 3D left-ventricular occupancy from only three sparse 2D
+    echocardiography slices, achieving 0.864 3D Dice and 0.765 3D IoU on
+    \textsc{MITEA-CAP}.
+    }
+
+    \cvItem{
+    Integrated Fourier positional encoding, differentiable multi-view
+    projection, learnable \textsc{SE(3)} slice-pose refinement, volumetric
+    regularization, and Reptile meta-initialization for subject-specific
+    sparse-view reconstruction.
+    }
+
+    \cvItem{
+    Extended the framework toward explicit Gaussian occupancy representations
+    with non-saturating primitive aggregation, reaching 0.950 IoU and
+    0.966 sampled occupancy accuracy in preliminary experiments.
+    }
+
+\cvItemListEnd
+
+
+%---------------- ENDOSCOPIC 3DGS ----------------
+
+\cvProjectHeading
+    {\href{https://github.com/tushar-nayak/endo-splat}
+    {Deformable 3D Reconstruction of Live Endoscopic Surgical Scenes}}
+    {Apr 2026 -- Present}
+
+\cvItemListStart
+
+    \cvItem{
+    Prototyping deformable 3D Gaussian Splatting for dynamic monocular
+    endoscopic reconstruction using depth/pose-based initialization,
+    differentiable rendering, deformation fields, and camera-aware projection.
+    }
+
+    \cvItem{
+    Exploring semantic feature alignment for open-vocabulary querying and
+    interpretation of reconstructed surgical scenes.
+    }
+
+\cvItemListEnd
+
+
+%---------------- MAMMOGRAPHY ----------------
+
+\cvProjectHeading
+    {\href{https://github.com/tushar-nayak/grading-cbisddsm}
+    {Geometric Multi-View Breast Cancer Detection}}
+    {Jan 2026 -- May 2026}
+
+\cvItemListStart
+
+    \cvItem{
+    Developed a geometric alignment and dual-view correspondence framework for
+    paired CC/MLO mammography, integrating lesion segmentation, localization,
+    image registration, and cross-view attention.
+    }
+
+    \cvItem{
+    Reduced cross-view lesion-centroid discrepancy by 99.1\%, enabling
+    spatially aligned multi-view representations for downstream malignancy
+    classification.
+    }
+
+\cvItemListEnd
+
+
+%===========================================================
+% PUBLICATIONS
+%===========================================================
+
+\section{Selected Publications, Manuscripts \& Presentations}
+
+\cvItemListStart
+
+    \cvItem{
+    \textbf{Nayak, T.}, Basdeo, R., Andrews, E., et al.
+    \textit{Real-time 3D Neuro-Vascular Deformation Estimation from Sparse
+    2D Angiography}. Manuscript in preparation.
+    }
+
+    \cvItem{
+    \textbf{Nayak, T.}
+    \textit{Approaches in Sparse-View 2D Echocardiography to 3D Cardiac
+    Volume Reconstruction using Neural Implicit Representations and Gaussian
+    Occupancy Fields}. Manuscript in preparation.
+    }
+
+    \cvItem{
+    Basdeo, R., Patel, S., \textbf{Nayak, T.}, et al.
+    \textit{A Review of Robotics in Achieving Autonomous and Remote
+    Neuroendovascular Intervention}. Under review, Journal of Intelligent
+    \& Robotic Systems.
+    }
+
+    \cvItem{
+    Kite, T., \textbf{Nayak, T.}, Jaffee, S., et al. (2026).
+    \textit{The use of artificial intelligence and machine learning to predict
+    tumor recurrence in high-grade gliomas: a systematic review}.
+    Neurosurgical Review, 49(1), 489.
+    }
+
+    \cvItem{
+    \textbf{Nayak, T.}, Gokulkrishnan, N., Chadaga, K., Sampathila, N.,
+    et al. (2024).
+    \textit{Automated histopathological detection and classification of lung
+    cancer with an image pre-processing pipeline and spatial attention with
+    deep neural networks}. Cogent Engineering, 11, 2357182.
+    }
+
+    \cvItem{
+    \textbf{Nayak, T.}, Sampathila, N., \& Gokulkrishnan, N. (2023).
+    \textit{Processing and Detection of Lung and Colon Cancer from
+    Histopathological Images using Deep Residual Networks}.
+    IEEE CONECCT 2023.
+    }
+
+    \cvItem{
+    \textbf{Nayak, T.}, Basdeo, R., Andrews, E., et al. (2026).
+    \textit{Toward Real-Time 3D Vascular State Estimation from Monocular
+    Fluoroscopy for Endovascular Robotic Neurosurgery}.
+    2nd International Workshop on the Evolving Landscape of Surgical Robotics,
+    IEEE/RSJ IROS 2026.
+    }
+
+\cvItemListEnd
+
+
+%===========================================================
+% TECHNICAL SKILLS
+%===========================================================
+
+\section{Technical Skills}
+
+\small{
+
+\textbf{Programming \& Scientific Computing:}
+Python, C++, MATLAB, R, Julia, CUDA, Linux, Git, Docker, Bash, \LaTeX. 
+
+\textbf{Deep Learning:}
+PyTorch, PyTorch3D, PyTorch Geometric, MONAI, TorchDiffEq, TensorFlow/Keras;
+GNNs, U-Nets, Transformers, Neural ODEs, PINNs, neural implicit
+representations, Gaussian representations. 
+
+\textbf{Medical Imaging \& Computer Vision:}
+CT, MRI, fluoroscopy/angiography, ultrasound/echocardiography, endoscopy;
+segmentation, registration, 2D--3D reconstruction, deformable modeling,
+multi-view geometry, camera geometry, differentiable projection/rendering.
+
+\textbf{3D Geometry \& Imaging Software:}
+OpenCV, SimpleITK/ITK, VTK, VMTK, nnU-Net;
+point clouds, surface meshes, anatomical geometry processing, DICOM, NIfTI.
+
+}
+
+
+%===========================================================
+% TEACHING & HONORS
+%===========================================================
+
+\section{Teaching \& Honors}
+
+\small{
+
+\textbf{Graduate Teaching Assistant, Carnegie Mellon University}
+\hfill 2025--2026
+
+Applied Deep Learning; Computer Vision for Engineers;
+Machine Learning Applications in Experimental Biomedical Engineering Research;
+Fundamentals of Computational Biomedical Engineering.
+
+\vspace{3pt}
+
+\textbf{Honors:}
+Carnegie Mellon University Biomedical Engineering Department Head's Fellowship
+(2024--2026);
+Best Paper Award, 2nd International Conference on Artificial Intelligence,
+Computational Electronics and Communication (2023).
+
+}
+
+\end{document}
